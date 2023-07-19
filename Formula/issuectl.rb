@@ -5,21 +5,21 @@
 class Issuectl < Formula
   desc "Your application description"
   homepage "https://github.com/janekbaraniewski/issuectl"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.5/issuectl-darwin-amd64"
-      sha256 "1aac959f4d0f4870fde6e94e2b474b2d8c589c4da3c301b5566cab90a019bfcf"
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.6/issuectl-darwin-amd64"
+      sha256 "87acb805805e6709397cc4f45a3db474108824becba222a38d42a6cfd9f0cfbb"
 
       def install
         bin.install "issuectl-darwin-amd64" => "issuectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.5/issuectl-darwin-arm64"
-      sha256 "4d6caafbced55eb34b675cbcfc46cdc4e75efd624f2541733ff7c615e5f9ef68"
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.6/issuectl-darwin-arm64"
+      sha256 "30649d655c38d4571d110d5adeb1f43d4a14a0d6705b37f08ae128bbafda042b"
 
       def install
         bin.install "issuectl-darwin-arm64" => "issuectl"
@@ -29,16 +29,16 @@ class Issuectl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.5/issuectl-linux-amd64"
-      sha256 "584c845ff07306744545d000f5de279e3fa092eea43cfa536aa2afee654b90f8"
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.6/issuectl-linux-amd64"
+      sha256 "e4609b97c18bccc551782207c6f973ef5d94166838933228e2a0d1bfa888d352"
 
       def install
         bin.install "issuectl-linux-amd64" => "issuectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.5/issuectl-linux-arm64"
-      sha256 "ff037793a7bd2b4de0d5351bbe132635d39c2d10927fe1d6e30a7c3b2f2edc94"
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.6/issuectl-linux-arm64"
+      sha256 "8a3ceb4c2b7ea9a7447ffa7b3ea9a958873912515fe070d28ddb8cb93e28345b"
 
       def install
         bin.install "issuectl-linux-arm64" => "issuectl"
