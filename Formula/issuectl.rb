@@ -5,43 +5,43 @@
 class Issuectl < Formula
   desc "Your application description"
   homepage "https://github.com/janekbaraniewski/issuectl"
-  version "0.0.12"
+  version "0.0.13"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.12/issuectl-darwin-arm64-0.0.12"
-      sha256 "13732840b3573087b03ac9f02500556a3bf8d4cf8e294f8ac619b7d8803897ec"
+    if Hardware::CPU.intel?
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.13/issuectl-darwin-amd64-0.0.13"
+      sha256 "56647b50ff01c187db35a470dc241c4a4440e0f032cb391c1206a81a871506c6"
 
       def install
-        bin.install "issuectl-darwin-arm64-0.0.12" => "issuectl"
+        bin.install "issuectl-darwin-amd64-0.0.13" => "issuectl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.12/issuectl-darwin-amd64-0.0.12"
-      sha256 "1d13393649311b7e5d718e8cc2fcaa91054ab6814f4a588f7df28d8102527269"
+    if Hardware::CPU.arm?
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.13/issuectl-darwin-arm64-0.0.13"
+      sha256 "fd7fbe44a43a7a9d91d494a1ec871ceebd1790266e6c3dc446e0deaf05aa20f9"
 
       def install
-        bin.install "issuectl-darwin-amd64-0.0.12" => "issuectl"
+        bin.install "issuectl-darwin-arm64-0.0.13" => "issuectl"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.12/issuectl-linux-arm64-0.0.12"
-      sha256 "c1954a949086520b10e9302e93bfd3a3817e6c6403af3da48218f011e2d8c996"
+    if Hardware::CPU.intel?
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.13/issuectl-linux-amd64-0.0.13"
+      sha256 "e2e86a76b67bbfd928c43b486021011fdefc8cd15ac2d28d89f56bc304af9541"
 
       def install
-        bin.install "issuectl-linux-arm64-0.0.12" => "issuectl"
+        bin.install "issuectl-linux-amd64-0.0.13" => "issuectl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.12/issuectl-linux-amd64-0.0.12"
-      sha256 "dd377b91db2796b4df7a80b876add20fdbba14b0547784765f7d5f263642de55"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/janekbaraniewski/issuectl/releases/download/v0.0.13/issuectl-linux-arm64-0.0.13"
+      sha256 "42749080f2a09153557b483ea48e09850b339737b0448d178f96c08c193b05be"
 
       def install
-        bin.install "issuectl-linux-amd64-0.0.12" => "issuectl"
+        bin.install "issuectl-linux-arm64-0.0.13" => "issuectl"
       end
     end
   end
